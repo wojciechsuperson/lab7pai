@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="skrypt.js"></script>
+</head>
+<body>
+<div class="d-flex justify-content-center">
+    <div class="spinner-border"
+         role="status" id="loading">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<h1>Students</h1>
+<table id="students"></table>
+<h1>Add student data</h1>
+<form method="POST" onsubmit="return sendData()">
+    <input id="id" name="id" type="hidden">
+    <label>
+        <input id="name" name="name" type="text" placeholder="Name"/>
+    </label>
+    <label>
+        <input id="lastName" name="lastName" type="text" placeholder="Surname"/>
+    </label>
+    <label>
+        <input id="average" name="average" min="1" max="5" step="0.01" type="number" placeholder="Average"/>
+    </label><br>
+    <button id="button-save" type="submit">Add</button>
+</form>
+<button hidden="hidden" id="delete-edit-form" onclick="deletebutton()">Close edit form</button>
+<h2 id="edit-title"></h2>
+<div id="edit-form"></div>
+</body>
+</html>
